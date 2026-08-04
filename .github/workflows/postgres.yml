@@ -50,7 +50,7 @@ jobs:
       run: cargo install --locked cargo-pgrx
       
     - name: Initialize pgrx (this takes a while on first run)
-      run: cargo pgrx init
+      run: cargo pgrx init --pg16=/usr/bin/pg_config
       
     - name: Test Postgres Extension (PG 16)
       working-directory: ./snowid_pg
