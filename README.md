@@ -23,25 +23,7 @@ Generate strictly time-ordered, distributed, 64-bit IDs directly inside your dat
 
 ## 🏗️ Architecture
 
-```mermaid
-graph TD
-    App["Backend Application (Node.js, Rust, Go, Python)"] -->|INSERT INTO ... RETURNING id| PG["PostgreSQL Database"]
-    
-    subgraph PostgreSQL Layer
-        PG -->|"DEFAULT snowidv2()"| NativeExt["Native Rust Extension (snowidv2_pg)"]
-        PG -->|"DEFAULT snowidv2_next(1)"| PureSQL["Pure SQL Function (postgres_pure.sql)"]
-    end
-    
-    subgraph Core Logic
-        NativeExt --> Core["Core Rust Library (snowidv2)"]
-    end
-    
-    style App fill:#f9f,stroke:#333,stroke-width:2px
-    style PG fill:#69b3a2,stroke:#333,stroke-width:2px
-    style NativeExt fill:#ff9999,stroke:#333,stroke-width:2px
-    style PureSQL fill:#ffb366,stroke:#333,stroke-width:2px
-    style Core fill:#ff6666,stroke:#333,stroke-width:2px
-```
+![digram](https://github.com/ArmanX-Labs/SnowIDv2/blob/main/readme_assets/diagram.png?raw=true)
 
 ---
 
