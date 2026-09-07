@@ -43,10 +43,7 @@ graph TD
     style Core fill:#ff6666,stroke:#333,stroke-width:2px
 ```
 
-<picture>
-  <source media="(prefers-mermaid: no-support)" srcset="https://raw.githubusercontent.com/Owenb135/SnowIDv2/refs/heads/main/docs/assets/diagram(1).png">
-  <img alt="Architecture Diagram" src="https://raw.githubusercontent.com/Owenb135/SnowIDv2/refs/heads/main/docs/assets/diagram(1).png">
-</picture>
+<img alt="Architecture Diagram" src="https://raw.githubusercontent.com/Owenb135/SnowIDv2/refs/heads/main/docs/assets/diagram(1).png" style="display:none" onerror="this.style.display='block'">
 
 ---
 
