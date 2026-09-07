@@ -23,7 +23,27 @@ Generate strictly time-ordered, distributed, 64-bit IDs directly inside your dat
 
 ## 🏗️ Architecture
 
-![digram](https://github.com/ArmanX-Labs/SnowIDv2/blob/main/readme_assets/diagram.png?raw=true)
+```mermaid
+graph TD
+    App["Backend Application (Node.js, Rust, Go, Python)"] -->|INSERT INTO ... RETURNING id| PG["PostgreSQL Database"]
+    
+    subgraph PostgreSQL Layer
+        PG -->|"DEFAULT snowidv2()"| NativeExt["Native Rust Extension (snowidv2_pg)"]
+        PG -->|"DEFAULT snowidv2_next(1)"| PureSQL["Pure SQL Function (postgres_pure.sql)"]
+    end
+    
+    subgraph Core Logic
+        NativeExt --> Core["Core Rust Library (snowidv2)"]
+    end
+    
+    style App fill:#f9f,stroke:#333,stroke-width:2px
+    style PG fill:#69b3a2,stroke:#333,stroke-width:2px
+    style NativeExt fill:#ff9999,stroke:#333,stroke-width:2px
+    style PureSQL fill:#ffb366,stroke:#333,stroke-width:2px
+    style Core fill:#ff6666,stroke:#333,stroke-width:2px
+```
+
+*If Mermaid diagram doesn't render, view the architecture diagram [here](https://raw.githubusercontent.com/ArmanX-Labs/SnowIDv2/refs/heads/main/docs/assets/diagram(1).png)*
 
 ---
 
@@ -184,6 +204,10 @@ SnowIDv2/
 
 We love contributions! Whether you're fixing a bug, adding a new language example, or improving the documentation, your help is welcome.
 
-We have created several **[Good First Issues](https://github.com/ArmanX-Labs/SnowIDv2/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)** specifically designed for new open-source contributors. Feel free to pick one up!
+We have created several **[Good First Issues](https://github.com/ArmanX-Labs/SnowIDv2/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)** specifically designed for new open-source contributors!
 
 Please read our [Contributing Guide](CONTRIBUTING.md) to learn how to set up your environment, run tests, and submit a Pull Request. Don't forget to review our [Code of Conduct](CODE_OF_CONDUCT.md) as well.
+
+---
+
+**Built by [ArmanX-Labs](https://github.com/ArmanX-Labs) • MIT Licensed**
