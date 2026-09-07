@@ -43,7 +43,10 @@ graph TD
     style Core fill:#ff6666,stroke:#333,stroke-width:2px
 ```
 
-*If Mermaid diagram doesn't render, view the architecture diagram [here](https://raw.githubusercontent.com/ArmanX-Labs/SnowIDv2/refs/heads/main/docs/assets/diagram(1).png)*
+<picture>
+  <source media="(prefers-mermaid: no-support)" srcset="https://raw.githubusercontent.com/Owenb135/SnowIDv2/refs/heads/main/docs/assets/diagram(1).png">
+  <img alt="Architecture Diagram" src="https://raw.githubusercontent.com/Owenb135/SnowIDv2/refs/heads/main/docs/assets/diagram(1).png">
+</picture>
 
 ---
 
@@ -204,9 +207,9 @@ SnowIDv2/
 
 We love contributions! Whether you're fixing a bug, adding a new language example, or improving the documentation, your help is welcome.
 
-We have created several **[Good First Issues](https://github.com/ArmanX-Labs/SnowIDv2/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)** specifically designed for new open-source contributors!
+We have created several **[Good First Issues](https://github.com/ArmanX-Labs/SnowIDv2/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)** specifically designed for new open-source contributors.
 
-Please read our [Contributing Guide](CONTRIBUTING.md) to learn how to set up your environment, run tests, and submit a Pull Request. Don't forget to review our [Code of Conduct](CODE_OF_CONDUCT.md) as well.
+Please read our [Contributing Guide](CONTRIBUTING.md) to learn how to set up your environment, run tests, and submit a Pull Request. Don't forget to review our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---
 
