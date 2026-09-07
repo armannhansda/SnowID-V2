@@ -43,8 +43,6 @@ graph TD
     style Core fill:#ff6666,stroke:#333,stroke-width:2px
 ```
 
-<img alt="Architecture Diagram" src="https://raw.githubusercontent.com/Owenb135/SnowIDv2/refs/heads/main/docs/assets/diagram(1).png" style="display:none" onerror="this.style.display='block'">
-
 ---
 
 ## 🧩 How it Works (Bit Layout)
